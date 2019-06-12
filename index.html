@@ -11,13 +11,13 @@
 <body>
     <code>
         <pre>
+           <h1>View Results in Developer Console now!</h1>
             var arr = [1, 5, 8, 15, 19, 22, 50, 88, 100];
             function fn(n1, n2) {
                 var flag = '';
                 for (let i = 0; i < arr.length; i++) {
                     if (arr[i] === n1 || arr[i] === n2) {
-                        if (arr[i] === n1) { flag += n1 };
-                        if (arr[i] === n2) { flag += n2 };
+                        flag += (arr[i] === n1) ? n1 : (arr[i] === n2) ? n2 : '';
                     }
                 }
                 flag = (flag == ('' + n1 + n2)) ? 'Both is found' : (flag == n1) ? n1 + ' is found' : (flag == n2) ? n2 + ' is found' : 'Not found';
@@ -37,8 +37,7 @@
             var flag = '';
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i] === n1 || arr[i] === n2) {
-                    if (arr[i] === n1) { flag += n1 };
-                    if (arr[i] === n2) { flag += n2 };
+                    flag += (arr[i] === n1) ? n1 : (arr[i] === n2) ? n2 : '';
                 }
             }
             flag = (flag == ('' + n1 + n2)) ? 'Both is found' : (flag == n1) ? n1 + ' is found' : (flag == n2) ? n2 + ' is found' : 'Not found';
